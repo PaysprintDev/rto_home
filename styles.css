@@ -1,0 +1,933 @@
+
+body {
+    margin: unset;
+}
+
+.rto_homes {
+    background-color: #fff;
+    font-family: monospace;
+
+    h1, h2, h3, h4, h5, h6, p {
+        margin: unset;
+    }
+
+    svg {
+        width: 15px;
+        height: 15px;
+    } 
+    .colored-list {
+        list-style: disc;
+        color: #fff;
+    }
+
+    header {
+        position: fixed;
+        background: #fff;
+        width: 100%;
+        z-index: 3;
+        div {
+            padding: 20px 75px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            img {
+                width: 55px;
+            }
+            ul {
+                list-style: none;
+                gap: 50px;
+                display: flex;
+                align-items: center;
+                li {
+                    gap: 50px;
+                    a {
+                        font: 600 18px 'Nunito Sans';
+                        font-family: monospace;
+                        color: #000;
+                        line-height: 25px;
+                        text-decoration: none;
+                    }
+                    button {
+                        background-color: #FFB800;
+                        padding: 10px;
+                        border-radius: 5px;
+                        border: none;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    section.head {
+        padding-top: 7rem !important;
+        display: flex;
+        gap: 70px;
+        padding: 10px 0px;
+        width: 100%;
+        background-color: #000;
+        justify-content: space-between;
+        div.elements {
+            color: #fff;
+            padding: 30px 40px;
+            width: 51%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 10px;
+            h2 {
+                font: 400 64px Nunito Sans;
+                span {
+                    color: #FFB800;
+                    font-weight: bold;
+                    font-family: Abril Fatface;
+                }
+            }
+            p {
+                color: #FFB800;
+                font: 400 28px Nunito Sans;
+                font-family: sans-serif;
+            }
+            h6 {
+                font-size: 28px;
+                font-weight: 400;
+                font-family: sans-serif;
+            }
+            button {
+                align-self: flex-start;
+                background-color: #FFB800;
+                border-radius: 10px;
+                border: none;
+                padding: 10px 65px;
+                font-weight: bold;
+                font-size: 20px;
+                margin-top: 10px;
+            }
+        }
+        img.grp {
+            padding: 40px 100px;
+            padding-left: unset;
+            padding-bottom: unset;
+            width: 445px;
+        }
+    }
+
+    section.about-paysprint {
+        padding: 60px 50px;
+        display: flex;
+        justify-content: space-between;
+        gap: 45px;
+        background-image: url('./Images/noise_texture_bg.png');
+        img {
+            border-radius: 170px 10px 170px 10px;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-around; */
+            gap: 45px;
+            h5 {
+                font: 600 50px Abril Fatface;
+            }
+            p {
+                font-size: 28px;
+                font-family: Nunito Sans;
+            }
+        }
+    }
+
+    section.challenge {
+        padding: 20px 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url('./Images/noise_texture_bg.png');
+        h5 {
+            padding: 25px 10px;
+            font: 600 50px Abril Fatface;
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            font: 400 28px Nunito Sans;
+            width: 82%;
+        }
+    }
+
+    section.services {
+        h5.serv {
+            padding: 25px 10px;
+            font: 600 50px Abril Fatface;
+            text-align: center;
+        }
+        div.all-three {
+            padding: 60px 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            div.other-components {
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                h5 {
+                    flex: 0 0 56%;
+                    font: 600 50px Abril Fatface; 
+                    text-align: center;
+                }
+                .grid-comps {
+                    padding: 60px 30px;
+                    box-shadow: 0px 2px 10px 8px #eee;
+                    border-radius: 25px;
+                    font-size: 24px;
+                    color: #031930;
+                    text-align: center;
+                    width: 33%;
+                }
+            }
+            div.other-componentsx {
+                display: flex;
+                align-items: center;
+                flex-direction: row-reverse;
+                gap: 40px;
+                h5 {
+                    flex: 0 0 56%;
+                    font: 600 50px Abril Fatface; 
+                    text-align: center;
+                }
+                .grid-comps {
+                    padding: 60px 30px;
+                    box-shadow: 0px 2px 10px 8px #eee;
+                    border-radius: 25px;
+                    font-size: 24px;
+                    color: #031930;
+                    text-align: center;
+                    width: 33%;
+                }
+            }
+        }
+    }
+
+    section.why-partner {
+        padding: 50px 60px;
+        div.first-head {
+            display: flex;
+            flex-direction: column;
+            flex: 0 0 41%;
+            gap: 20px;
+            h5 {
+               font: 600 45px Abril Fatface; 
+               font-family: Abril Fatface;
+            }
+            p {
+               font: 400 28px Nunito Sans; 
+               /* font-family: sans-serif; */
+            }
+        }
+        div.each-components {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            .grid-comps {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    padding: 40px;
+                    box-shadow: 0px 2px 10px 8px #d2d2d2;
+                    border-radius: 25px;
+                    img {
+                        width: 48px;
+                        height: 48px;
+                    }
+                    h6 {
+                        font-size: 24px;
+                        font-weight: bold;
+                        font-family: sans-serif;
+                        line-height: 25px;
+                    }
+                    p {
+                        font-family: sans-serif !important;
+                        font: 400 20px 'Inter';
+                        color: #031930;
+                    }
+                }
+            }
+        }
+    }
+
+    section.strategy {
+        padding: 50px 60px;
+        display: flex;
+        align-content: center;
+        gap: 7rem;
+        div.head {
+            h4 {
+                font: 600 45px Abril Fatface; 
+                font-family: Abril Fatface;
+            }
+            ol {
+                gap: 15px;
+                display: flex;
+                flex-direction: column;            
+                li {
+                    font: 550 26px sans-serif; 
+                    font-family: sans-serif;
+                    span { 
+                        font-weight: 200;
+                        letter-spacing: 2px;
+                    }
+                }
+            }
+        }
+    }
+
+    h4.stand-out {
+        font: 600 45px Abril Fatface; 
+        font-family: Abril Fatface;
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        padding: 15px;
+    }
+
+    p.stand-out-txt {
+        font: 400 28px Nunito Sans; 
+        font-family: Nunito Sans;
+        text-align: center;
+        padding: 20px 10rem;
+    }
+    
+    section.structure {
+        padding: 30px 60px;
+        main {
+            display: flex;
+            div.head {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                h4 {
+                    font: 600 45px Abril Fatface; 
+                    font-family: Abril Fatface;
+                }
+                ol {
+                    gap: 15px;
+                    display: flex;
+                    flex-direction: column;            
+                    li {
+                        font: 550 25px sans-serif; 
+                        font-family: sans-serif;
+                        span { 
+                            font-weight: 200;
+                            letter-spacing: 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        padding: 50px 60px;
+        background-color: #000;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        gap: 90px;
+        div.first {
+            width: 100%;
+            display: flex;
+            align-content: center;
+            justify-content: space-between;
+            .img-links {
+                flex: 0 0 30%;
+                .footer-logo {
+                    /* width: auto;
+                    height: 65px; */
+                    width: 202px;
+                    height: 190px;
+                }
+                div {
+                    padding: 5px 35px;
+                    display: flex;
+                    align-items: center;
+                    gap: 24px;
+                    margin-top: -15px;
+                }
+            }
+            .links {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 50px;
+                ul {
+                    list-style: none;
+                    margin: unset;
+                    padding: unset;
+                    li {
+                        font-weight: 700;
+                        font-size: 23px;
+                        line-height: 28px;
+                        color: #FFFFFE;
+                        a {
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 15px;
+                            color: #FFFFFE;
+                            text-decoration: none;
+                        }
+                        p {
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: unset;
+                            color: #FFFFFE;
+                            text-decoration: none;
+                            cursor: not-allowed;
+                        }
+                    }
+                }
+                .res {
+                    grid-column: span 2;
+                    div {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        column-gap: 1rem;
+                        width: 120%;
+                    }
+                }
+                .service {
+                    padding-left: 20%;
+                }
+            }
+        }
+        div.last {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            .location {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                /* gap: 30px; */
+                div {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    a {
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 25px;
+                        color: #FFFFFE;
+                        font-family: 'lato';
+                        text-decoration: none;
+                    }
+                }
+                .pin {
+                    flex-direction: column !important;
+                    gap: 10px !important;
+                    align-items: unset !important;
+                }
+            }
+            .final {
+                hr {
+                    width: 90%;
+                    border: 1px solid #DEDEDE;
+                }
+                div {
+                    margin-top: 20px;
+                    p {
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: #BBBBBB;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 1200px) {
+    .rto_homes {
+        section.head {
+            gap: 25px;
+            img.grp {
+                width: 363px;
+                padding: 40px 60px;
+            }
+            div.all {
+                .unlock {
+                    h3 {
+                        font-size: 50px;
+                    }
+                    h2 {
+                        font-size: 65px;
+                    }
+                }
+                .other {
+                    width: 80%;
+                    button {
+                        font-size: 20px;
+                    }
+                }
+            }
+            div.elements {
+                h2 {
+                    font-size: 45px;
+                }
+                h6 {
+                    font-size: 20px;
+                }
+                button {
+                    padding: 10px 45px;
+                }
+            }
+        }
+
+        section.about-paysprint {
+            img {
+                width: 40%;
+            }
+            div {
+                justify-content: space-evenly;
+                h5 {
+                    font-size: 40px;
+                }
+                p {
+                    font-size: 21px;
+                }
+            }
+        }
+        
+        section.challenge {
+            h5.serv {
+                padding: 15px 10px;
+                font-size: 40px;
+            }
+            p {
+                width: 100%;
+            }
+        }
+
+        section.services {
+            h5.serv {
+                padding: 15px 10px;
+                font-size: 40px;
+            }
+            div.all-three {
+                div.other-components {
+                    justify-content: space-evenly;
+                    h5 {
+                        flex: unset;
+                    }
+                }
+                div.other-componentsx {
+                    justify-content: space-evenly;
+                    h5 {
+                        flex: unset;
+                    }
+                }
+            }
+        }
+
+        section.why-partner {
+            div.each-components {
+                flex-direction: column;
+                h5 {
+                    font-size: 40px;
+                }
+            }
+        }
+
+        section.strategy {
+            gap: 2rem;
+            img {
+                width: 480px;
+                height: 400px;
+            }
+        }
+
+        section.structure {
+            main {
+                img {
+                    width: 450px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1023px) {
+    .rto_homes {
+        header {
+            div {
+                padding: 20px 40px;
+            }
+        }
+
+        section.services {
+            div.all-three {
+                gap: 60px;
+                div.other-components {
+                    justify-content: space-between;
+                    flex-direction: column;
+                    gap: 30px;
+                    h5 {
+                        font-size: 40px;
+                    }
+                    .grid-comps {
+                        width: unset;
+                    }
+                }
+                div.other-componentsx {
+                    justify-content: space-between;
+                    flex-direction: column;
+                    gap: 30px;
+                    h5 {
+                        font-size: 40px;
+                    }
+                    .grid-comps {
+                        width: unset;
+                    }
+                }
+            }
+        }
+
+        section.why-partner {
+            div.each-components {
+                gap: 30px;
+                h5 {
+                    font-size: 40px;
+                }
+            }
+        }
+
+        section.strategy {
+            padding: 30px 60px;
+            flex-direction: column;
+            div.head {
+                h4 {
+                    font-size: 40px;
+                }
+            }
+        }
+
+        p.stand-out-txt {
+            padding: 1rem 3rem;
+        }
+
+        footer {
+            padding: 50px;
+            div.first {
+                .links {
+                    gap: 25px;
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+            div.last {
+                .location {
+                    flex-direction: column;
+                    align-items: unset;
+                    justify-content: unset;
+                    gap: 30px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .rto_homes {
+        overflow: hidden;
+        header {
+            div {
+                padding: 20px;
+                ul {
+                    margin: unset;
+                    gap: 30px;
+                }
+            }
+        }
+
+        section.head {
+            gap: 5px;
+            img.grp {
+                padding: 20px;
+                width: 345px;
+            }
+            div.elements {
+                h2 {
+                    font-size: 35px;
+                }
+                p {
+                    font-size: 20px;
+                }
+                h6 {
+                    font-size: 15px;
+                }
+                button {
+                    font-size: 17px;
+                }
+            }
+        }
+
+        section.about-paysprint {
+            div {
+                h5 {
+                    font-size: 35px;
+                }
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        section.challenge {
+            h5.serv {
+                font-size: 35px;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+
+        section.services {
+            h5.serv {
+                font-size: 35px;
+            }
+            div.all-three {
+                padding: 50px;
+                div {
+                    align-items: flex-start !important;
+                    h5 {
+                        font-size: 35px !important;
+                    }
+                    div {
+                        font-size: 22px !important;
+                    }
+                }
+            }
+        }
+
+        section.why-partner {
+            div.each-components {
+                h5 {
+                    font-size: 35px;
+                }
+                .grid-comps {
+                    div {
+                        h6 {
+                            font-size: 22px;
+                        }
+                    }
+                }
+            }
+        }
+
+        section.strategy {
+            padding: 30px 50px;
+            div.head {
+                h4 {
+                    font-size: 35px;
+                }
+                ol {
+                    li {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+        h4.stand-out {
+            padding: 10px;
+            font-size: 35px;
+        }
+
+        p.stand-out-txt {
+            font-size: 22px;
+        }
+
+        section.structure {
+            main {
+                flex-direction: column-reverse;
+                div.head {
+                    h4 {
+                        font-size: 35px;
+                    }
+                    ol {
+                        li {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        footer {
+            width: unset;
+            div.first {
+                .links {
+                    grid-template-columns: repeat(2, 1fr);
+                    .service {
+                        padding: unset;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .rto_homes {
+        header {
+            div {
+                padding: 8px 10px;
+                ul {
+                    gap: 15px;
+                }
+            }
+        }
+
+        section.head, section.about-paysprint, section.challenge,
+        section.services, section.why-partner, section.strategy,
+        section.structure {
+            padding: 30px 20px;
+        }
+
+        section.head {
+            flex-direction: column-reverse;
+            padding: 40px;
+            gap: 20px;
+            width: unset;
+            img.grp {
+                padding: unset;
+                width: 100%;
+                align-self: center;
+            }
+
+            div.elements {
+                width: 100%;
+                gap: 15px;
+                padding: unset;
+            }
+        }
+
+        section.about-paysprint {
+            padding: 40px;
+            flex-direction: column;
+            gap: 25px;
+            img {
+                width: 85%;
+                align-self: center;
+            }
+            div {
+                gap: 15px;
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        section.services {
+            div.all-three {
+                padding: 20px 0px;
+            }
+        }
+
+        section.why-partner {
+            div.each-components {
+                .grid-comps {
+                    grid-template-columns: repeat(1, 1fr);
+                    gap: 35px;
+                }
+            }
+        }
+
+        footer {
+            padding: 30px;
+            div.first {
+                flex-direction: column;
+                gap: 2rem;
+                .links {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 15px;
+                    ul {
+                        padding: unset;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .rto_homes {
+        section.about-paysprint  {
+            padding: 30px 20px;
+        }
+        footer {
+            div.first {
+                flex-direction: column;
+                gap: 35px;
+                .links {
+                    grid-template-columns: repeat(2, 1fr);
+                    .res {
+                        grid-column: span 2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .rto_homes {
+        header {
+            div {
+                ul {
+                    padding: 0px 10px;
+                    justify-content: space-between;
+                    gap: 15px;
+                    li {
+                        a {
+                            line-height: 20px;
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+
+        section.strategy, section.structure main {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        footer {
+            padding: 20px;
+            div.first {
+                .links {
+                    grid-template-columns: repeat(2, 1fr);
+                    .res {
+                        grid-column: span 2;
+                        div {
+                            grid-template-columns: repeat(1, 1fr);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
