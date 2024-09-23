@@ -76,54 +76,39 @@ body {
         display: flex;
         gap: 70px;
         padding: 10px 0px;
-        width: 100%;
-        background-color: #000;
-        justify-content: space-between;
-        div.elements {
-            color: #fff;
-            padding: 30px 40px;
-            width: 51%;
+        background-image: url('/Images/hero_background.jpg');
+        background-size: cover;
+        main {
+            padding: 60px 90px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            gap: 10px;
-            h2 {
-                font: 400 64px Nunito Sans;
-                span {
-                    color: #FFB800;
-                    font-weight: bold;
-                    font-family: Abril Fatface;
-                }
+            gap: 35px;
+            color: #fff;
+            width: 45%;
+            h4 {
+                font: 700 64px Constantia;
             }
             p {
-                color: #FFB800;
-                font: 400 28px Nunito Sans;
-                font-family: sans-serif;
-            }
-            h6 {
-                font-size: 28px;
-                font-weight: 400;
-                font-family: sans-serif;
+                font: 400 24px Constantia;
             }
             button {
-                align-self: flex-start;
-                background-color: #FFB800;
+                padding: 15px 70px;
                 border-radius: 10px;
-                border: none;
-                padding: 10px 65px;
-                font-weight: bold;
                 font-size: 20px;
-                margin-top: 10px;
+                font-weight: 400;
+                border: none;
+                color: #fff;
+                align-self: flex-start;
+                background-color: #2A91A2;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #fff;
+                color: #2A91A2;
             }
         }
-        img.grp {
-            padding: 40px 100px;
-            padding-left: unset;
-            padding-bottom: unset;
-            width: 445px;
-        }
     }
-
 
     section.subscribe {
         padding: 40px 60px;
@@ -214,40 +199,6 @@ body {
 
 @media screen and (max-width: 1200px) {
     .rto_homes {
-        section.head {
-            gap: 25px;
-            img.grp {
-                width: 363px;
-                padding: 40px 60px;
-            }
-            div.all {
-                .unlock {
-                    h3 {
-                        font-size: 50px;
-                    }
-                    h2 {
-                        font-size: 65px;
-                    }
-                }
-                .other {
-                    width: 80%;
-                    button {
-                        font-size: 20px;
-                    }
-                }
-            }
-            div.elements {
-                h2 {
-                    font-size: 45px;
-                }
-                h6 {
-                    font-size: 20px;
-                }
-                button {
-                    padding: 10px 45px;
-                }
-            }
-        }
 
     }
 }
@@ -296,28 +247,6 @@ body {
             }
         }
 
-        section.head {
-            gap: 5px;
-            img.grp {
-                padding: 20px;
-                width: 345px;
-            }
-            div.elements {
-                h2 {
-                    font-size: 35px;
-                }
-                p {
-                    font-size: 20px;
-                }
-                h6 {
-                    font-size: 15px;
-                }
-                button {
-                    font-size: 17px;
-                }
-            }
-        }
-
         footer {
             width: unset;
             div.first {
@@ -341,28 +270,6 @@ body {
                 ul {
                     gap: 15px;
                 }
-            }
-        }
-
-        section.head {
-            padding: 30px 20px;
-        }
-
-        section.head {
-            flex-direction: column-reverse;
-            padding: 40px;
-            gap: 20px;
-            width: unset;
-            img.grp {
-                padding: unset;
-                width: 100%;
-                align-self: center;
-            }
-
-            div.elements {
-                width: 100%;
-                gap: 15px;
-                padding: unset;
             }
         }
 
