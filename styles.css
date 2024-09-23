@@ -124,207 +124,6 @@ body {
         }
     }
 
-    section.about-paysprint {
-        padding: 60px 50px;
-        display: flex;
-        justify-content: space-between;
-        gap: 45px;
-        background-image: url('./Images/noise_texture_bg.png');
-        img {
-            border-radius: 170px 10px 170px 10px;
-        }
-        div {
-            display: flex;
-            flex-direction: column;
-            /* justify-content: space-around; */
-            gap: 45px;
-            h5 {
-                font: 600 50px Abril Fatface;
-            }
-            p {
-                font-size: 28px;
-                font-family: Nunito Sans;
-            }
-        }
-    }
-
-    section.challenge {
-        padding: 20px 50px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-image: url('./Images/noise_texture_bg.png');
-        h5 {
-            padding: 25px 10px;
-            font: 600 50px Abril Fatface;
-            text-align: center;
-        }
-        p {
-            text-align: center;
-            font: 400 28px Nunito Sans;
-            width: 82%;
-        }
-    }
-
-    section.services {
-        h5.serv {
-            padding: 25px 10px;
-            font: 600 50px Abril Fatface;
-            text-align: center;
-        }
-        div.all-three {
-            padding: 60px 50px;
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-            div.other-components {
-                display: flex;
-                align-items: center;
-                gap: 40px;
-                h5 {
-                    flex: 0 0 56%;
-                    font: 600 50px Abril Fatface; 
-                    text-align: center;
-                }
-                .grid-comps {
-                    padding: 60px 30px;
-                    box-shadow: 0px 2px 10px 8px #eee;
-                    border-radius: 25px;
-                    font-size: 24px;
-                    color: #031930;
-                    text-align: center;
-                    width: 33%;
-                }
-            }
-            div.other-componentsx {
-                display: flex;
-                align-items: center;
-                flex-direction: row-reverse;
-                gap: 40px;
-                h5 {
-                    flex: 0 0 56%;
-                    font: 600 50px Abril Fatface; 
-                    text-align: center;
-                }
-                .grid-comps {
-                    padding: 60px 30px;
-                    box-shadow: 0px 2px 10px 8px #eee;
-                    border-radius: 25px;
-                    font-size: 24px;
-                    color: #031930;
-                    text-align: center;
-                    width: 33%;
-                }
-            }
-        }
-    }
-
-    section.why-partner {
-        padding: 50px 60px;
-        div.first-head {
-            display: flex;
-            flex-direction: column;
-            flex: 0 0 41%;
-            gap: 20px;
-            h5 {
-               font: 600 45px Abril Fatface; 
-               font-family: Abril Fatface;
-            }
-            p {
-               font: 400 28px Nunito Sans; 
-               /* font-family: sans-serif; */
-            }
-        }
-        div.each-components {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            .grid-comps {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 40px;
-                div {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 15px;
-                    padding: 40px;
-                    box-shadow: 0px 2px 10px 8px #d2d2d2;
-                    border-radius: 25px;
-                    img {
-                        width: 48px;
-                        height: 48px;
-                    }
-                    h6 {
-                        font-size: 24px;
-                        font-weight: bold;
-                        font-family: sans-serif;
-                        line-height: 25px;
-                    }
-                    p {
-                        font-family: sans-serif !important;
-                        font: 400 20px 'Inter';
-                        color: #031930;
-                    }
-                }
-            }
-        }
-    }
-
-    section.strategy {
-        padding: 50px 60px;
-        display: flex;
-        align-content: center;
-        gap: 7rem;
-        div.head {
-            h4 {
-                font: 600 45px Abril Fatface; 
-                font-family: Abril Fatface;
-            }
-            ol {
-                gap: 15px;
-                display: flex;
-                flex-direction: column;            
-                li {
-                    font: 550 26px sans-serif; 
-                    font-family: sans-serif;
-                    span { 
-                        font-weight: 200;
-                        letter-spacing: 2px;
-                    }
-                }
-            }
-        }
-    }
-
-    section.structure {
-        padding: 30px 60px;
-        main {
-            display: flex;
-            div.head {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                h4 {
-                    font: 600 45px Abril Fatface; 
-                    font-family: Abril Fatface;
-                }
-                ol {
-                    gap: 15px;
-                    display: flex;
-                    flex-direction: column;            
-                    li {
-                        font: 550 25px sans-serif; 
-                        font-family: sans-serif;
-                        span { 
-                            font-weight: 200;
-                            letter-spacing: 2px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
     footer {
         color: #fff;
         div.up {
@@ -426,76 +225,6 @@ body {
             }
         }
 
-        section.about-paysprint {
-            img {
-                width: 40%;
-            }
-            div {
-                justify-content: space-evenly;
-                h5 {
-                    font-size: 40px;
-                }
-                p {
-                    font-size: 21px;
-                }
-            }
-        }
-        
-        section.challenge {
-            h5.serv {
-                padding: 15px 10px;
-                font-size: 40px;
-            }
-            p {
-                width: 100%;
-            }
-        }
-
-        section.services {
-            h5.serv {
-                padding: 15px 10px;
-                font-size: 40px;
-            }
-            div.all-three {
-                div.other-components {
-                    justify-content: space-evenly;
-                    h5 {
-                        flex: unset;
-                    }
-                }
-                div.other-componentsx {
-                    justify-content: space-evenly;
-                    h5 {
-                        flex: unset;
-                    }
-                }
-            }
-        }
-
-        section.why-partner {
-            div.each-components {
-                flex-direction: column;
-                h5 {
-                    font-size: 40px;
-                }
-            }
-        }
-
-        section.strategy {
-            gap: 2rem;
-            img {
-                width: 480px;
-                height: 400px;
-            }
-        }
-
-        section.structure {
-            main {
-                img {
-                    width: 450px;
-                }
-            }
-        }
     }
 }
 
@@ -508,52 +237,6 @@ body {
             }
         }
 
-        section.services {
-            div.all-three {
-                gap: 60px;
-                div.other-components {
-                    justify-content: space-between;
-                    flex-direction: column;
-                    gap: 30px;
-                    h5 {
-                        font-size: 40px;
-                    }
-                    .grid-comps {
-                        width: unset;
-                    }
-                }
-                div.other-componentsx {
-                    justify-content: space-between;
-                    flex-direction: column;
-                    gap: 30px;
-                    h5 {
-                        font-size: 40px;
-                    }
-                    .grid-comps {
-                        width: unset;
-                    }
-                }
-            }
-        }
-
-        section.why-partner {
-            div.each-components {
-                gap: 30px;
-                h5 {
-                    font-size: 40px;
-                }
-            }
-        }
-
-        section.strategy {
-            padding: 30px 60px;
-            flex-direction: column;
-            div.head {
-                h4 {
-                    font-size: 40px;
-                }
-            }
-        }
 
         footer {
             padding: 50px;
@@ -611,89 +294,6 @@ body {
             }
         }
 
-        section.about-paysprint {
-            div {
-                h5 {
-                    font-size: 35px;
-                }
-                p {
-                    font-size: 20px;
-                }
-            }
-        }
-
-        section.challenge {
-            h5.serv {
-                font-size: 35px;
-            }
-            p {
-                font-size: 20px;
-            }
-        }
-
-        section.services {
-            h5.serv {
-                font-size: 35px;
-            }
-            div.all-three {
-                padding: 50px;
-                div {
-                    align-items: flex-start !important;
-                    h5 {
-                        font-size: 35px !important;
-                    }
-                    div {
-                        font-size: 22px !important;
-                    }
-                }
-            }
-        }
-
-        section.why-partner {
-            div.each-components {
-                h5 {
-                    font-size: 35px;
-                }
-                .grid-comps {
-                    div {
-                        h6 {
-                            font-size: 22px;
-                        }
-                    }
-                }
-            }
-        }
-
-        section.strategy {
-            padding: 30px 50px;
-            div.head {
-                h4 {
-                    font-size: 35px;
-                }
-                ol {
-                    li {
-                        font-size: 20px;
-                    }
-                }
-            }
-        }
-
-        section.structure {
-            main {
-                flex-direction: column-reverse;
-                div.head {
-                    h4 {
-                        font-size: 35px;
-                    }
-                    ol {
-                        li {
-                            font-size: 20px;
-                        }
-                    }
-                }
-            }
-        }
-
         footer {
             width: unset;
             div.first {
@@ -720,9 +320,7 @@ body {
             }
         }
 
-        section.head, section.about-paysprint, section.challenge,
-        section.services, section.why-partner, section.strategy,
-        section.structure {
+        section.head {
             padding: 30px 20px;
         }
 
@@ -741,37 +339,6 @@ body {
                 width: 100%;
                 gap: 15px;
                 padding: unset;
-            }
-        }
-
-        section.about-paysprint {
-            padding: 40px;
-            flex-direction: column;
-            gap: 25px;
-            img {
-                width: 85%;
-                align-self: center;
-            }
-            div {
-                gap: 15px;
-                p {
-                    font-size: 20px;
-                }
-            }
-        }
-
-        section.services {
-            div.all-three {
-                padding: 20px 0px;
-            }
-        }
-
-        section.why-partner {
-            div.each-components {
-                .grid-comps {
-                    grid-template-columns: repeat(1, 1fr);
-                    gap: 35px;
-                }
             }
         }
 
@@ -795,9 +362,7 @@ body {
 
 @media screen and (max-width: 600px) {
     .rto_homes {
-        section.about-paysprint  {
-            padding: 30px 20px;
-        }
+        
         footer {
             div.first {
                 flex-direction: column;
@@ -828,13 +393,6 @@ body {
                         }
                     }
                 }
-            }
-        }
-
-        section.strategy, section.structure main {
-            img {
-                width: 100%;
-                height: 100%;
             }
         }
 
