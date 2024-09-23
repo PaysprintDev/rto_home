@@ -296,22 +296,6 @@ body {
         }
     }
 
-    h4.stand-out {
-        font: 600 45px Abril Fatface; 
-        font-family: Abril Fatface;
-        background-color: #000;
-        color: #fff;
-        text-align: center;
-        padding: 15px;
-    }
-
-    p.stand-out-txt {
-        font: 400 28px Nunito Sans; 
-        font-family: Nunito Sans;
-        text-align: center;
-        padding: 20px 10rem;
-    }
-    
     section.structure {
         padding: 30px 60px;
         main {
@@ -343,120 +327,16 @@ body {
 
     footer {
         padding: 50px 60px;
-        background-color: #000;
+        background-color: #252B42;
         color: #fff;
         display: flex;
         flex-direction: column;
         gap: 90px;
         div.first {
-            width: 100%;
-            display: flex;
-            align-content: center;
-            justify-content: space-between;
-            .img-links {
-                flex: 0 0 30%;
-                .footer-logo {
-                    /* width: auto;
-                    height: 65px; */
-                    width: 202px;
-                    height: 190px;
-                }
-                div {
-                    padding: 5px 35px;
-                    display: flex;
-                    align-items: center;
-                    gap: 24px;
-                    margin-top: -15px;
-                }
-            }
-            .links {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 50px;
-                ul {
-                    list-style: none;
-                    margin: unset;
-                    padding: unset;
-                    li {
-                        font-weight: 700;
-                        font-size: 23px;
-                        line-height: 28px;
-                        color: #FFFFFE;
-                        a {
-                            font-weight: 500;
-                            font-size: 16px;
-                            line-height: 15px;
-                            color: #FFFFFE;
-                            text-decoration: none;
-                        }
-                        p {
-                            font-weight: 500;
-                            font-size: 16px;
-                            line-height: unset;
-                            color: #FFFFFE;
-                            text-decoration: none;
-                            cursor: not-allowed;
-                        }
-                    }
-                }
-                .res {
-                    grid-column: span 2;
-                    div {
-                        display: grid;
-                        grid-template-columns: repeat(2, 1fr);
-                        column-gap: 1rem;
-                        width: 120%;
-                    }
-                }
-                .service {
-                    padding-left: 20%;
-                }
-            }
+
         }
         div.last {
-            display: flex;
-            flex-direction: column;
-            gap: 35px;
-            .location {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                /* gap: 30px; */
-                div {
-                    display: flex;
-                    align-items: center;
-                    gap: 15px;
-                    a {
-                        font-weight: 500;
-                        font-size: 16px;
-                        line-height: 25px;
-                        color: #FFFFFE;
-                        font-family: 'lato';
-                        text-decoration: none;
-                    }
-                }
-                .pin {
-                    flex-direction: column !important;
-                    gap: 10px !important;
-                    align-items: unset !important;
-                }
-            }
-            .final {
-                hr {
-                    width: 90%;
-                    border: 1px solid #DEDEDE;
-                }
-                div {
-                    margin-top: 20px;
-                    p {
-                        font-weight: 500;
-                        font-size: 16px;
-                        line-height: 19px;
-                        color: #BBBBBB;
-                        text-align: center;
-                    }
-                }
-            }
+            
         }
     }
 
@@ -629,10 +509,6 @@ body {
             }
         }
 
-        p.stand-out-txt {
-            padding: 1rem 3rem;
-        }
-
         footer {
             padding: 50px;
             div.first {
@@ -754,15 +630,6 @@ body {
                     }
                 }
             }
-        }
-
-        h4.stand-out {
-            padding: 10px;
-            font-size: 35px;
-        }
-
-        p.stand-out-txt {
-            font-size: 22px;
         }
 
         section.structure {
