@@ -110,6 +110,49 @@ body {
         }
     }
 
+    section.path {
+        padding: 50px 60px;
+        display: flex;
+        gap: 35px;
+        justify-content: space-between;
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-content: center;
+            gap: 20px;
+            width: 60%;
+            h4 {
+                font: 700 36px Constantia;
+            }
+            p {
+                font: 400 24px Constantia;
+            }
+            button {
+                padding: 15px 70px;
+                border-radius: 10px;
+                font-size: 20px;
+                font-weight: 400;
+                border: none;
+                color: #fff;
+                align-self: flex-start;
+                background-color: #2A91A2;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #fff;
+                color: #2A91A2;
+            }
+        }
+        img {
+            width: 400px;
+        }
+    }
+
+    section.simplify {
+        
+    }
+
     section.subscribe {
         padding: 40px 60px;
         background-color: #FAFAFA;
