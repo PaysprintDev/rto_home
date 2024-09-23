@@ -124,6 +124,30 @@ body {
         }
     }
 
+
+    section.subscribe {
+        padding: 40px 60px;
+        background-color: #FAFAFA;
+        display: flex;
+        justify-content: space-between;
+        div {
+            h6 {
+                color: #252B42;
+                font-weight: 700;
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+            p {
+                color: #737373;
+                font-weight: 500;
+                font-size: 14px;
+            }
+        }
+        button {
+            cursor: pointer;
+        }
+    }
+
     footer {
         color: #fff;
         div.up {
