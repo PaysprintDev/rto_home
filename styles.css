@@ -140,8 +140,9 @@ body {
                 cursor: pointer;
             }
             button:hover {
-                background-color: #fff;
+                background-color: #FAFAFA;
                 color: #2A91A2;
+                border: 1px solid #2A91A2;
             }
         }
         img {
@@ -150,7 +151,68 @@ body {
     }
 
     section.simplify {
-        
+        padding: 50px 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        color: #fff;
+        background-color: #252B42;
+        h4 {
+            font: 700 36px Constantia;
+        }
+        p {
+            font: 400 20px Constantia;
+            color: #d2d2d2;
+        }
+        h6 {
+            font: 700 17px Constantia;
+        }
+        button {
+            padding: 15px 70px;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: 400;
+            border: none;
+            color: #fff;
+            align-self: flex-start;
+            background-color: #2A91A2;
+            cursor: pointer;
+            align-self: center;
+        }
+        button:hover {
+            background-color: #fff;
+            color: #2A91A2;
+        }
+        div.title {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        div.compact {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            .each {
+                padding: 20px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: 12px;
+                h6 {
+                    margin-bottom: 5px;
+                }
+                p {
+                    text-align: center;
+                }
+            }
+        }
+        div.stats {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
     }
 
     section.subscribe {
