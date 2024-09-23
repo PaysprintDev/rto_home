@@ -14,18 +14,21 @@
 
         <header>
             <div>
-                <img src="./Images/icons/paysprint_logo.png" alt="paysprint.ca">
+                <div class="home_icon">
+                    <img src="./Images/icons/rto_homes_icon.png" alt="paysprint.ca" onclick="dynamicRouting('#')">
+                    <p> H.O.M.E </p>
+                </div>
             
                 <ul>
-                    <li><a href="#"> R.T.O Home now </a></li>
-                    <li><a href="#"> Plan and pricing </a></li>
-                    <li><a href="#"> R.T.O Blogs </a></li>
-                    <li><a href="#"> Contact </a></li>
-                    <li> <button type="button" onclick="alert('Hello There')"> Get started </button> </li> 
+                    <li><a href="https://rtohomeweb.com/index.php"> R.T.O Home now </a></li>
+                    <li><a href="https://rtohomeweb.com/Features.php"> Plan and pricing </a></li>
+                    <li><a href="https://rtohomeweb.wordpress.com"> R.T.O Blogs </a></li>
+                    <li><a href="https://rtohomeweb.com/Contact.php"> Contact </a></li>
+                    <li> <button type="button" onclick="dynamicRouting('https://rtohomeweb.com/Get-Started.php')"> Get started </button> </li> 
                 </ul>
             </div>
-        </header>  
-<!--  
+        </header>
+
         <section class="head">
             <div class="elements">  
                 <h2> Strategic <span> Partnership </span> with <span> PaySprint </span> </h2>
@@ -36,7 +39,7 @@
 
             <img class="grp" src="/Images/hero.png" alt="home image">
         </section>   
-
+<!-- 
         <section class="about-paysprint">
             <img src="/Images/about_paysprint.png" alt="about PaySprint">
 

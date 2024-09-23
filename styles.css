@@ -30,8 +30,19 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            img {
-                width: 55px;
+            .home_icon {
+                display: flex;
+                padding: unset;
+                align-items: flex-end;
+                gap: 5px;            
+                img {
+                    width: 55px;
+                    cursor: pointer;
+                }
+                p {
+                    font-weight: 700;
+                    font-size: 18px;
+                }
             }
             ul {
                 list-style: none;
@@ -41,7 +52,7 @@ body {
                 li {
                     gap: 50px;
                     a {
-                        font: 600 18px 'Nunito Sans';
+                        font: 400 18px 'Nunito Sans';
                         font-family: monospace;
                         color: #000;
                         line-height: 25px;
@@ -53,6 +64,7 @@ body {
                         border-radius: 5px;
                         border: none;
                         cursor: pointer;
+                        color: #fff;
                     }
                 }
             }
