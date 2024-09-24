@@ -215,6 +215,57 @@ body {
         }
     }
 
+    section.co-ownership {
+        padding: 50px 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 90px;
+        h4 {
+            font: 700 36px Constantia;
+        }
+        p {
+            font: 400 20px Constantia;
+            color: #d2d2d2;
+        }
+        h6 {
+            font: 700 17px Constantia;
+        }
+        div.choose {
+            h4 {
+                line-height: 55px;
+                text-align: center;
+            }
+            .grid {
+                padding: 35px 100px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                row-gap: 40px;
+                column-gap: 80px;
+                .each {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    padding: 40px;
+                    box-shadow: 0px 2px 10px 8px #d2d2d2;
+                    border-radius: 25px;
+                    img {
+                        width: 48px;
+                        height: 48px;
+                    }
+                    h6 {
+                        font-size: 24px;
+                        font-weight: bold;
+                        font-family: sans-serif;
+                        line-height: 25px;
+                    }
+                    p {
+                        color: #031930;
+                    }
+                }
+            }
+        }
+    }
+
     section.subscribe {
         padding: 40px 60px;
         background-color: #FAFAFA;
