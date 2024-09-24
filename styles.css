@@ -264,6 +264,16 @@ body {
                 }
             }
         }
+
+        div.real-world {
+            display: flex;
+            gap: 40px;
+            .texts {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+            }
+        }
     }
 
     section.subscribe {
