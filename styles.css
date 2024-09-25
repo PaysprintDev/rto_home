@@ -267,11 +267,47 @@ body {
 
         div.real-world {
             display: flex;
+            align-items: center;
             gap: 40px;
             .texts {
                 display: flex;
                 flex-direction: column;
                 gap: 25px;
+                .about-it {
+                    h6 {
+                        font-weight: 400;
+                        font-size: 24px;
+                        font-family: sans-serif;
+                        line-height: 35px;
+                        color: #031930;
+                    }
+                    ol {
+                        font-size: 24px;
+                        li {
+                            line-height: 35px;
+                            color: #031930;
+                        }
+                    }
+                }
+                .breakdown {
+                    h6 {
+                        font-weight: bold;
+                        font-family: sans-serif;
+                        color: #031930;
+                        font-size: 24px;
+                    }
+                    ol {
+                        padding: unset;
+                        li {
+                            font-size: 24px;
+                            font-weight: 500;
+                            line-height: 35px;
+                            color: #031930;
+                            list-style-type: none;
+                            padding-inline-start: 30px;
+                        }
+                    }
+                }
             }
         }
     }
