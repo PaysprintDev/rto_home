@@ -583,13 +583,13 @@ body {
 
         footer {
             width: unset;
-            div.first {
-                .links {
-                    grid-template-columns: repeat(2, 1fr);
-                    .service {
-                        padding: unset;
-                    }
+            div.up {
+                div.last {
+                    gap: 20px;
                 }
+            }
+            div.down {
+                padding: 20px 10px;
             }
         }
     }
