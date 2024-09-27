@@ -25,7 +25,7 @@
                     <li><a href="https://rtohomeweb.com/Features.php"> Plan and pricing </a></li>
                     <li><a href="https://rtohomeweb.wordpress.com"> R.T.O Blogs </a></li>
                     <li><a href="https://rtohomeweb.com/Contact.php"> Contact </a></li>
-                    <li> <button type="button" onclick="dynamicRouting('https://velocity-client.newton.ca/en/client/journey/home?shortCode=b9e29j8e3c3k')"> Get Pre-Approved </button> </li> 
+                    <li> <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"> Get Pre-Approved </button> </li> 
                 </ul>
             </div>
         </header>
@@ -36,9 +36,9 @@
 
                 <p> Achieve your dream of owning a home without the stress of additional debt </p>
 
-                <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"> Get Pre-Approved </button>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"> Get Pre-Approved </button>
             </main>
-        </section> 
+        </section>
 
         <section class="path">
             <div>
@@ -46,7 +46,7 @@
 
                 <p> Owning a home is a significant milestone, but saving for a 20% down payment can be challenging. We’re here to make it possible. As your co-owning partner, we contribute 5% to 15% of the home’s value, helping you reach that 20% down payment faster and start your journey to homeownership sooner. This isn't a loan, so there’s no interest or additional debt—just a shared investment in your future. To get started, simply complete the evaluation form and we take it from there. </p>
 
-                <button type="button" onclick="dynamicRouting('https://velocity-client.newton.ca/en/client/journey/home?shortCode=b9e29j8e3c3k')"> Get Pre-Approved </button>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"> Get Pre-Approved </button>
             </div>
 
             <img src="./Images/path.png" alt="Visit rtohomeweb.com today">
@@ -84,7 +84,7 @@
                 <img src="./Images/simplify_stats.png" alt="Visit rtohomeweb.com for more info :)">
             </div>
 
-            <button type="button" onclick="dynamicRouting('https://velocity-client.newton.ca/en/client/journey/home?shortCode=b9e29j8e3c3k')"> Get Pre-Approved </button>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"> Get Pre-Approved </button>
         </section>
 
         <section class="co-ownership">
@@ -206,7 +206,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form action="">
+            <form id="rtohomeForm">
               <div class="mb-3">
                 <label for="firstname" class="col-form-label"> First Name: </label>
                 <input type="text" class="form-control" id="firstname" name="firstname" required>
@@ -221,13 +221,16 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Close </button>
-                <button type="submit" class="btn btn-primary"> Submit </button>
+                <button type="submit" id="submitBtn" class="btn btn-primary">
+                    <span class="submit-text"> Submit </span>
+                    <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                </button>
               </div>
             </form>
           </div>
         </div>
       </div>
-    </div>   
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
@@ -235,25 +238,86 @@
 
     <script>
         function dynamicRouting (goHere) {
-            // window.location.href = goHere;
-            swal({
-                title: "Are you sure?",
-                text: "Are you sure you want to visit RTO Homes",
-                icon: "warning",
-                buttons: true,
-                dangerMode: true,
-            })
-            .then((goToLocation) => {
-                if (goToLocation) {
-                    swal("Hold on while we refirect you there :)", { icon: "success" });
-                    if (goHere) {
-                        window.location.href = goHere;
-                    }
-                } else {
-                    swal("You can go ahead and keep exploring this page");
-                }
-            });
+            window.location.href = goHere;
+            // swal({
+            //     title: "Are you sure?",
+            //     text: "Are you sure you want to visit RTO Homes",
+            //     icon: "warning",
+            //     buttons: true,
+            //     dangerMode: true,
+            // })
+            // .then((goToLocation) => {
+            //     if (goToLocation) {
+            //         swal("Hold on while we redirect you there :)", { icon: "success" });
+            //         if (goHere) {
+            //             window.location.href = goHere;
+            //         }
+            //     } else {
+            //         swal("You can go ahead and keep exploring this page");
+            //     }
+            // });
         }
+
+        const form = document.getElementById('rtohomeForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const spinner = submitBtn.querySelector('.spinner-border');
+        const submitText = submitBtn.querySelector('.submit-text');
+
+        form.addEventListener('submit', async function (event) {
+            event.preventDefault(); // Prevent the form's default behavior
+
+              // Show the loader, hide the text, and disable the button
+            spinner.classList.remove('d-none');
+            submitText.classList.add('d-none');
+            submitBtn.disabled = true;
+
+            // Create an object from our form's data
+            const formData = new FormData(form);
+            const data = {
+                firstname: formData.get('firstname'),
+                lastname: formData.get('lastname'),
+                email: formData.get('email')
+            };
+
+            try {
+                // Send async request using fetch
+                const response = await fetch('http://localhost:9090/api/v1/rtohomes-ref', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data) // Convert data to JSON string
+                });
+
+                // Await and handle my response
+                const result = await response.json();
+                console.log(result);
+
+                if (response.ok && result.status == 200) {
+                    spinner.classList.add('d-none');
+                    submitText.classList.remove('d-none');
+                    submitBtn.disabled = false;
+
+                    swal("Please hold on while we redirect you "+ result.data.firstname + " :)", { icon: "success" });
+                    window.location.href = result.redirect_link;
+                } else {
+                    spinner.classList.add('d-none');
+                    submitText.classList.remove('d-none');
+                    submitBtn.disabled = false;
+
+                    swal(result.message, { icon: "error" });
+                    window.location.href = result.redirect_link;
+                    console.log(result.message);
+                }
+            } catch (error) {
+                spinner.classList.add('d-none');
+                submitText.classList.remove('d-none');
+                submitBtn.disabled = false;
+
+                swal(error.message, {icon: "error"});
+                console.log(error.message)
+            }
+        });
     </script>
     
 </body>
