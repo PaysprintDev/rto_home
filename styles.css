@@ -464,14 +464,6 @@ body {
 
 }
 
-
-@media screen and (max-width: 1200px) {
-    .rto_homes {
-
-    }
-}
-
-
 @media screen and (max-width: 1023px) {
     .rto_homes {
         header {
