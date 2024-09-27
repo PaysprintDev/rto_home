@@ -576,7 +576,7 @@ body {
             form {
                 width: unset;
                 input {
-                    flex: 0 0 64.5%;
+                    width: 100%;
                 }
             }
         }
@@ -584,6 +584,7 @@ body {
         footer {
             width: unset;
             div.up {
+                padding: 40px;
                 div.last {
                     gap: 20px;
                 }
@@ -602,7 +603,19 @@ body {
             div {
                 padding: 8px 10px;
                 ul {
-                    gap: 15px;
+                    gap: 17px;
+                    padding-inline-start: 15px;
+                    li {
+                        a {
+                            font-size: 15px;
+                            line-height: unset;
+                        }
+                    }
+                }
+                .home_icon {
+                    p {
+                        display: none;
+                    }
                 }
             }
         }
@@ -742,17 +755,34 @@ body {
             }
         }
 
+        section.subscribe {
+            div {
+                h6 {
+                    font-size: 20px;
+                }
+            }
+
+            form {
+                input {
+                    font-size: 15px;
+                    padding-right: 30px;
+                }
+                button {
+                    padding: 15px 40px;
+                    font-size: 15px;
+                }
+            }
+        }
+
         footer {
             padding: 30px;
-            div.first {
+            div.up {
+                padding: 25px;
                 flex-direction: column;
-                gap: 2rem;
-                .links {
-                    grid-template-columns: repeat(2, 1fr);
-                    gap: 15px;
-                    ul {
-                        padding: unset;
-                    }
+                align-items: flex-start;
+                gap: 30px;
+                div.last {
+                    gap: 40px;
                 }
             }
         }
@@ -765,13 +795,19 @@ body {
         
         footer {
             div.first {
-                flex-direction: column;
-                gap: 35px;
-                .links {
-                    grid-template-columns: repeat(2, 1fr);
-                    .res {
-                        grid-column: span 2;
-                    }
+                gap: 15px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+    .rto_homes {
+        & section.co-ownership {
+            & div.choose {
+                .grid {
+                    grid-template-columns: repeat(1, 1fr);
                 }
             }
         }
@@ -798,15 +834,9 @@ body {
 
         footer {
             padding: 20px;
-            div.first {
-                .links {
-                    grid-template-columns: repeat(2, 1fr);
-                    .res {
-                        grid-column: span 2;
-                        div {
-                            grid-template-columns: repeat(1, 1fr);
-                        }
-                    }
+            div.up {
+                div.last {
+                    gap: 20px;
                 }
             }
         }
