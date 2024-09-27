@@ -235,66 +235,25 @@
 
     <script>
         function dynamicRouting (goHere) {
-            // alert(`you are trying to go here ${goHere}`);
-            window.location.href = goHere;
-        }
-
-        async function showForm () {
-            try {
-                
-                let firstName = localStorage.getItem("firstname");
-                let lastName = localStorage.getItem("lastname");
-                let email = localStorage.getItem("email");
-
-                const config = {
-                    url: 'https://exbc.ca/api/v1/posrequestTwo',
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    
-                    data: {
-                    firsname: firstName,
-                    lastname: lastName,
-                    email: email,
+            // window.location.href = goHere;
+            swal({
+                title: "Are you sure?",
+                text: "Are you sure you want to visit RTO Homes",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((goToLocation) => {
+                if (goToLocation) {
+                    swal("Hold on while we refirect you there :)", { icon: "success" });
+                    if (goHere) {
+                        window.location.href = goHere;
                     }
-                };
-
-                const result = await axios.post( config.url, config.data, config.headers );
-
-
-                if(result.data.status === 200) {
-                    // console.log(res);
-                    swal("We have received your Request", "One of our Sale Executives would contact you within the next 48 hours. Thanks.", "success")
-                    .then(function() {
-                        window.location = "./index.html";
-                        document.getElementById('norms4').style.display = "none";
-                    });
-                    localStorage.removeItem("email2"); 
-                    localStorage.removeItem('name2');
-                    localStorage.removeItem('name3');
-                    localStorage.removeItem('business2');
-                    localStorage.removeItem('phone2');
-                    localStorage.removeItem('role2');
-                    localStorage.removeItem('refer2');
                 } else {
-
-                    swal("Error!", "Sorry, your request wasn't complete please try again", "error")
-                    .then(function() { window.location = "./index.html"; });
-                    localStorage.removeItem("email2"); 
-                    localStorage.removeItem('name2');
-                    localStorage.removeItem('name3');
-                    localStorage.removeItem('business2');
-                    localStorage.removeItem('phone2');
-                    localStorage.removeItem('role2');
-                    localStorage.removeItem('refer2');
+                    swal("You can go ahead and keep exploring this page");
                 }
-
-            } catch (error) {
-                error.response ? swal("Error", error.response.data.message, "error") : swal(error.message);
-            }
+            });
         }
-
     </script>
     
 </body>
